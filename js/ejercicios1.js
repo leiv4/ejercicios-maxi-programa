@@ -1,13 +1,29 @@
-// Ejemplo en ejercicio1.js
-let resultadoEjercicio1 = prompt("Ingresa algo para el ejercicio 1");
-
-// Añadir resultado al contenedor
-document.getElementById("resultados").innerHTML +=
-  "<p>Ejercicio 1: " + resultadoEjercicio1 + "</p>";
-
 // 1. Generalmente	es	la	suma,	pero	ya	la	hicimos	en	el	video!
 // 2. Hacer	un	programa	para	solicitar	por	teclado	un	número	y	luego devolver	su
 // valor	elevado	al	cubo.
+// 1. Generalmente es la suma, pero ya la hicimos en el video!
+// 2. Hacer un programa para solicitar por teclado un número y luego devolver su
+// valor elevado al cubo.
+function ejercicio2() {
+  let resultadoEjercicio1 = prompt("Ejercicio 2: Ingresa un número por favor");
+
+  // Lógica del ejercicio 2
+  let resultadoCubo = resultadoEjercicio1 ** 3;
+
+  // Mostrar resultados en el contenedor
+  document.getElementById("resultados").innerHTML +=
+    "<p>Ejercicio 2: El cubo de " +
+    resultadoEjercicio1 +
+    " es " +
+    resultadoCubo +
+    "</p>";
+
+  return resultadoCubo;
+}
+
+// Llamar a la función al cargar el script
+ejercicio2();
+
 // Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
 // 3. Hacer	un	programa	que	permita	ingresar	el	año	actual	y	el	año	de	la	fecha	de
 // nacimiento	de	una	persona	y	luego	calcule	y	emita	por	pantalla	su	edad.
@@ -39,3 +55,6 @@ document.getElementById("resultados").innerHTML +=
 // muestre	por	pantalla	la	suma,	la	resta,	la	multiplicación	y	la	división	de	dichos
 // números.	Se	deben	mostrar	cuatro	resultados	en	pantalla.	Los	números	deben
 // ser	solicitados	una	única	vez.
+window.addEventListener("load", function () {
+  ejercicio2();
+});
