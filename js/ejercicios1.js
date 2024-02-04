@@ -4,16 +4,18 @@
 // 1. Generalmente es la suma, pero ya la hicimos en el video!
 // 2. Hacer un programa para solicitar por teclado un número y luego devolver su
 // valor elevado al cubo.
+// Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
+
 function ejercicio2() {
-  let resultadoEjercicio1 = prompt("Ejercicio 2: Ingresa un número por favor");
+  let resultadoEjercicio2 = prompt("Ejercicio 2: Ingresa un número por favor");
 
   // Lógica del ejercicio 2
-  let resultadoCubo = resultadoEjercicio1 ** 3;
+  let resultadoCubo = resultadoEjercicio2 ** 3;
 
   // Mostrar resultados en el contenedor
   document.getElementById("resultados").innerHTML +=
     "<p>Ejercicio 2: El cubo de " +
-    resultadoEjercicio1 +
+    resultadoEjercicio2 +
     " es " +
     resultadoCubo +
     "</p>";
@@ -24,11 +26,26 @@ function ejercicio2() {
 // Llamar a la función al cargar el script
 ejercicio2();
 
-// Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
 // 3. Hacer	un	programa	que	permita	ingresar	el	año	actual	y	el	año	de	la	fecha	de
 // nacimiento	de	una	persona	y	luego	calcule	y	emita	por	pantalla	su	edad.
 // Nota:	no	hay	que	tener	en	cuenta	si	la	persona	cumplió	años	o	no,
 // simplemente	calcular.
+// Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
+function ejercicio3() {
+  let resultadoEjercicio3 = prompt("Ejercicio 3: Ingresa tu año de nacimiento");
+
+  let today = new Date();
+  let year = today.getFullYear();
+
+  let edad = year - resultadoEjercicio3;
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Ejercicio 3: Tienes " + edad + " años</p>";
+
+  return edad;
+}
+
+ejercicio3();
 // 4. Hacer	un	programa	que	permita	ingresar	los	kilómetros	existentes	entre	dos
 // ciudades	y	la	velocidad	promedio	de	un	vehículo.	Calcular	y	emitir	por	pantalla
 // el	tiempo	aproximado	que	demandará	llegar	de	un	punto	a	otro	teniendo	en
@@ -55,6 +72,3 @@ ejercicio2();
 // muestre	por	pantalla	la	suma,	la	resta,	la	multiplicación	y	la	división	de	dichos
 // números.	Se	deben	mostrar	cuatro	resultados	en	pantalla.	Los	números	deben
 // ser	solicitados	una	única	vez.
-window.addEventListener("load", function () {
-  ejercicio2();
-});
