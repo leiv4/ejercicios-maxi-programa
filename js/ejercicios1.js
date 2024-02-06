@@ -14,7 +14,7 @@ function ejercicio2() {
 
   // Mostrar resultados en el contenedor
   document.getElementById("resultados").innerHTML +=
-    "<p>Ejercicio 2: El cubo de " +
+    "<p>Resultado de Ejercicio 2: El cubo de " +
     resultadoEjercicio2 +
     " es " +
     resultadoCubo +
@@ -40,7 +40,7 @@ function ejercicio3() {
   let edad = year - resultadoEjercicio3;
 
   document.getElementById("resultados").innerHTML +=
-    "<p>Ejercicio 3: Tienes " + edad + " años</p>";
+    "<p>Resultado de Ejercicio 3: Tienes " + edad + " años</p>";
 
   return edad;
 }
@@ -50,6 +50,31 @@ ejercicio3();
 // ciudades	y	la	velocidad	promedio	de	un	vehículo.	Calcular	y	emitir	por	pantalla
 // el	tiempo	aproximado	que	demandará	llegar	de	un	punto	a	otro	teniendo	en
 // cuenta	los	datos	ingresados.
+function ejercicio4() {
+  let distanciaEjercicio4 = prompt(
+    "Ejercicio 4: Ingresa los kilómetros existentes entre dos ciudades"
+  );
+
+  let velocidadEjercicio4 = prompt(
+    "Ejercicio 4: Ingresa la velocidad promedio de un vehículo"
+  );
+
+  let formulaTiempoEjercicio4 = distanciaEjercicio4 / velocidadEjercicio4;
+
+  let horaEjercicio4 = Math.floor(formulaTiempoEjercicio4);
+
+  let minutoEjercicio4 = Math.round((formulaTiempoEjercicio4 % 1) * 60);
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 4: Tardarás en llegar de una ciudad a otra " +
+    horaEjercicio4 +
+    ":" +
+    minutoEjercicio4 +
+    "</p>";
+}
+
+ejercicio4();
+
 // 5. Una	casa	de	computación	paga	a	sus	empleados	un	sueldo	fijo	de	ARS15000
 // más	una	comisión	del	5%	sobre	el	total	facturado	por	cada	empleado.	Hacer	un
 // programa	para	ingresar	el	total	facturado	por	un	empleado	y	que	luego	calcule
