@@ -104,19 +104,137 @@ function ejercicio5() {
 ejercicio5();
 // 6. Hacer	un	programa	para	ingresar	por	teclado	las	tres	notas	de	exámenes	de	un
 // alumno	y	luego	calcule	y	emita	por	pantalla	el	promedio	final.
+
+function ejercicio6() {
+  let nota1Ejercicio6 = prompt("Ejercicio 6: Ingresa la primera nota");
+  let nota2Ejercicio6 = prompt("Ejercicio 6: Ingresa la segunda nota");
+  let nota3Ejercicio6 = prompt("Ejercicio 6: Ingresa la tercera nota");
+  let promedioEjercicio6 =
+    (parseInt(nota1Ejercicio6) +
+      parseInt(nota2Ejercicio6) +
+      parseInt(nota3Ejercicio6)) /
+    3;
+  // Quería que se mostrara solamente 2 decimales en pantalla, por eso el método .toFixed(2).
+  promedioEjercicio6 = promedioEjercicio6.toFixed(2);
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 6: Tu promedio final es: " +
+    promedioEjercicio6 +
+    "</p>";
+  return promedioEjercicio6;
+}
+
+ejercicio6();
 // 7. Hacer	un	programa	para	ingresar	por	teclado	los	metros	cuadrados	totales	de
 // un	predio	y	los	metros	cuadrados	cubiertos;	luego	calcular	y	mostrar	por
 // pantalla	el	porcentaje	de	metros	cuadrados	cubiertos	y	el	porcentaje	de
 // metros	cuadrados	descubiertos.
+
+function ejercicio7() {
+  let metrosCuadradosEjercicio7 = prompt(
+    "Ejercicio 7: Ingresa los metros cuadrados totales de tu predio"
+  );
+
+  let metrosCuadradosCubiertosEjercicio7 = prompt(
+    "Ejercicio 7: Ingresa los metros cuadrados cubiertos de tu predio"
+  );
+
+  let porcentajeCubiertosEjercicio7 =
+    (parseInt(metrosCuadradosCubiertosEjercicio7) * 100) /
+    parseInt(metrosCuadradosEjercicio7);
+
+  let metrosCuadradosDescubiertosEjercicio7 =
+    parseInt(metrosCuadradosEjercicio7) -
+    parseInt(metrosCuadradosCubiertosEjercicio7);
+
+  let porcentajeDescubiertosEjercicio7 =
+    (parseInt(metrosCuadradosDescubiertosEjercicio7) * 100) /
+    metrosCuadradosEjercicio7;
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 7: Metros cuadrados cubiertos: " +
+    porcentajeCubiertosEjercicio7.toFixed(2) +
+    "%</p><p>Resultado de Ejercicio 7: Metros cuadrados descubiertos: " +
+    porcentajeDescubiertosEjercicio7.toFixed(2) +
+    "%</p>";
+}
+
+ejercicio7();
 // 8. Una	importante	cadena	de	delivery	cuenta	con	una	promoción	por	tiempo
 // limitado	en	la	que	otorga	un	15%	de	descuento	sobre	el	total	del	valor	de	la
 // compra	realizada.	Hacer	un	programa	para	solicitar	el	monto	total	y	el	mismo
 // calcule	y	emita	por	pantalla	el	total	a	cobrar	con	el	descuento	aplicado.
+
+function ejercicio8() {
+  let montoTotalEjercicio8 = prompt(
+    "Ejercicio 8: Ingresa el monto total de tu compra"
+  );
+  let descuentoEjercicio8 = montoTotalEjercicio8 * 0.15;
+  let montoFinalEjercicio8 = montoTotalEjercicio8 - descuentoEjercicio8;
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 8: Gracias por tu compra en éste día tan especial, por lo que te damos un descuento del 15% sobre el total: AR$" +
+    montoFinalEjercicio8 +
+    "</p>";
+}
+
+ejercicio8();
 // 9. Una	universidad	desea	conocer	los	porcentajes	de	mujeres	y	hombres	en	las
 // carreras	de	ciencias	exactas.	Se	solicita	un	programa	para	cargar	la	cantidad	de
 // mujeres	y	la	cantidad	de	hombres	y	que	el	mismo	calcule	y emita	por	pantalla
 // los	porcentajes	correspondientes.
+function ejercicio9() {
+  let cantidadMujeresEjercicio9 = prompt(
+    "Ejercicio 9: Ingresa la cantidad de mujeres"
+  );
+  let cantidadHombresEjercicio9 = prompt(
+    "Ejercicio 9: Ingresa la cantidad de hombres"
+  );
+  let cantidadTotalAlumnosEjercicio9 =
+    parseInt(cantidadMujeresEjercicio9) + parseInt(cantidadHombresEjercicio9);
+  let porcentajeMujeresEjercicio9 =
+    (parseInt(cantidadMujeresEjercicio9) * 100) /
+    parseInt(cantidadTotalAlumnosEjercicio9);
+  let porcentajeHombresEjercicio9 =
+    (parseInt(cantidadHombresEjercicio9) * 100) /
+    parseInt(cantidadTotalAlumnosEjercicio9);
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 9: Porcentaje de mujeres: " +
+    porcentajeMujeresEjercicio9.toFixed(2) +
+    "%</p><p>Resultado de Ejercicio 9: Porcentaje de hombres: " +
+    porcentajeHombresEjercicio9.toFixed(2) +
+    "%</p>";
+}
+
+ejercicio9();
 // 10. Hacer	un	programa	que	permita	ingresar	por	teclado	dos	números	y	que	luego
 // muestre	por	pantalla	la	suma,	la	resta,	la	multiplicación	y	la	división	de	dichos
 // números.	Se	deben	mostrar	cuatro	resultados	en	pantalla.	Los	números	deben
 // ser	solicitados	una	única	vez.
+
+function ejercicio10() {
+  let primerNumeroEjercicio10 = prompt("Ejercicio 10: Ingresa el primer número");
+  let segundoNumeroEjercicio10 = prompt("Ejercicio 10: Ingresa el segundo número");
+  let sumaEjercicio10 =
+    parseInt(primerNumeroEjercicio10) + parseInt(segundoNumeroEjercicio10);
+  let restaEjercicio10 =
+    parseInt(primerNumeroEjercicio10) - parseInt(segundoNumeroEjercicio10);
+  let multiplicaciónEjercicio10 =
+    parseInt(primerNumeroEjercicio10) * parseInt(segundoNumeroEjercicio10);
+  let divisionEjercicio10 =
+    parseInt(primerNumeroEjercicio10) / parseInt(segundoNumeroEjercicio10);
+
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 10: La suma es: " +
+    sumaEjercicio10 +
+    "</p><p>Resultado de Ejercicio10: La resta es: " +
+    restaEjercicio10 +
+    "</p><p>Resultado de Ejercicio10: La multiplicación es: " +
+    multiplicaciónEjercicio10 +
+    "</p><p>Resultado de Ejercicio10: La division es: " +
+    divisionEjercicio10 +
+    "</p>";
+}
+
+ejercicio10();
