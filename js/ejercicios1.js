@@ -9,7 +9,7 @@
 // RECORDATORIO PERSONAL: MODIFICAR EL CÓDIGO PARA QUE CUANDO EL USUARIO INGRESE UN DATO, SE CORROBORE QUE EL DATO INGRESADO SEA EL CORRECTO, DE LO CONTRARIO, PEDIR DE NUEVO EL DATO CORRECTO.
 function ejercicio2() {
   let resultadoEjercicio2 = prompt("Ejercicio 2: Ingresa un número por favor");
-
+  resultadoEjercicio2 = parseInt(resultadoEjercicio2);
   let resultadoCubo = resultadoEjercicio2 ** 3;
   // Mostrar resultados en el contenedor
   document.getElementById("resultados").innerHTML +=
@@ -169,6 +169,7 @@ function ejercicio8() {
   let montoTotalEjercicio8 = prompt(
     "Ejercicio 8: Ingresa el monto total de tu compra"
   );
+  montoTotalEjercicio8;
   let descuentoEjercicio8 = montoTotalEjercicio8 * 0.15;
   let montoFinalEjercicio8 = montoTotalEjercicio8 - descuentoEjercicio8;
 
