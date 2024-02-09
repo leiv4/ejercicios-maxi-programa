@@ -140,23 +140,101 @@ function ejercicio16() {
 }
 
 ejercicio16();
-//   if (importeEjercicio16 < 1000) {
-//     document.getElementById("resultados").innerHTML +=
-//       "<p>Resultado de Ejercicio 16: No hay descuento</p>";
-//   } else if (importeEjercicio16 >= 1000 && importeEjercicio16 < 5000) {
-//     document.getElementById("resultados").innerHTML +=
-//       "<p>Resultado de Ejercicio 16: Descuento del 10%</p>";
-//   } else {
-//     document.getElementById("resultados").innerHTML +=
-//       "<p>Resultado de Ejercicio 16: Descuento del 18%</p>";
-//   }
-// }
 // 7. Hacer	un programa	para	ingresar	cuatro	números distintos y	luego	mostrar	por
 // pantalla	el	mayor de	ellos.
+function ejercicio17() {
+  let numero1Ejercicio17 = parseInt(
+    prompt("Ejercicio 17: Ingresa el primer numero")
+  );
+  let numero2Ejercicio17 = parseInt(
+    prompt("Ejercicio 17: Ingresa el segundo numero")
+  );
+  let numero3Ejercicio17 = parseInt(
+    prompt("Ejercicio 17: Ingresa el tercer numero")
+  );
+  let numero4Ejercicio17 = parseInt(
+    prompt("Ejercicio 17: Ingresa el cuarto numero")
+  );
+  let máximo = Math.max(
+    numero1Ejercicio17,
+    numero2Ejercicio17,
+    numero3Ejercicio17,
+    numero4Ejercicio17
+  );
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 17: El mayor de los 4 números es: " + máximo + "</p>";
+}
+ejercicio17();
 // 8. Hacer	un	programa	para	ingresar	cuatro	números distintos	y	luego	mostrar	por
 // pantalla	el	menor	de	ellos.
+function ejercicio18() {
+  let numero1Ejercicio18 = parseInt(
+    prompt("Ejercicio 18: Ingresa el primer numero")
+  );
+  let numero2Ejercicio18 = parseInt(
+    prompt("Ejercicio 18: Ingresa el segundo numero")
+  );
+  let numero3Ejercicio18 = parseInt(
+    prompt("Ejercicio 18: Ingresa el tercer numero")
+  );
+  let numero4Ejercicio18 = parseInt(
+    prompt("Ejercicio 18: Ingresa el cuarto numero")
+  );
+  let mínimo = Math.min(
+    numero1Ejercicio18,
+    numero2Ejercicio18,
+    numero3Ejercicio18,
+    numero4Ejercicio18
+  );
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 18: El menor de los 4 números es: " + mínimo + "</p>";
+}
+
+ejercicio18();
 // 9. Hacer	un	programa para	ingresar	cinco	números	distintos	y	luego	mostrar	por
 // pantalla	el	mayor	y	el	menor	de	ellos.
+
+function ejercicio19() {
+  let numero1Ejercicio19 = parseInt(
+    prompt("Ejercicio 19: Ingresa el primer numero")
+  );
+  let numero2Ejercicio19 = parseInt(
+    prompt("Ejercicio 19: Ingresa el segundo numero")
+  );
+  let numero3Ejercicio19 = parseInt(
+    prompt("Ejercicio 19: Ingresa el tercer numero")
+  );
+  let numero4Ejercicio19 = parseInt(
+    prompt("Ejercicio 19: Ingresa el cuarto numero")
+  );
+  let numero5Ejercicio19 = parseInt(
+    prompt("Ejercicio 19: Ingresa el quinto numero")
+  );
+
+  let máximo = Math.max(
+    numero1Ejercicio19,
+    numero2Ejercicio19,
+    numero3Ejercicio19,
+    numero4Ejercicio19,
+    numero5Ejercicio19
+  );
+  let mínimo = Math.min(
+    numero1Ejercicio19,
+    numero2Ejercicio19,
+    numero3Ejercicio19,
+    numero4Ejercicio19,
+    numero5Ejercicio19
+  );
+  document.getElementById("resultados").innerHTML +=
+    "<p>Resultado de Ejercicio 19: El mayor de los 5 números es: " +
+    máximo +
+    "</p>" +
+    "<p>Resultado de Ejercicio 19: El menor de los 5 números es: " +
+    mínimo +
+    "</p>";
+}
+
+ejercicio19();
 // 10. Hacer	un	programa	para	ingresar	cuatro	números y	luego	mostrar	por	pantalla
 // cuáles son	mayores	a	100.
 // 11. Hacer	un	programa	para	ingresar cuatro	números	y	luego	mostrar	por	pantalla
