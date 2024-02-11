@@ -237,6 +237,53 @@ function ejercicio19() {
 ejercicio19();
 // 10. Hacer	un	programa	para	ingresar	cuatro	números y	luego	mostrar	por	pantalla
 // cuáles son	mayores	a	100.
+
+function ejercicio20() {
+  let numero1Ejercicio20 = parseInt(
+    prompt("Ejercicio 20: Ingresa el primer numero")
+  );
+  let numero2Ejercicio20 = parseInt(
+    prompt("Ejercicio 20: Ingresa el segundo numero")
+  );
+  let numero3Ejercicio20 = parseInt(
+    prompt("Ejercicio 20: Ingresa el tercer numero")
+  );
+  let numero4Ejercicio20 = parseInt(
+    prompt("Ejercicio 20: Ingresa el cuarto numero")
+  );
+  // Verificar que se hayan ingresado exactamente 4 números
+  if (
+    !isNaN(numero1Ejercicio20) &&
+    !isNaN(numero2Ejercicio20) &&
+    !isNaN(numero3Ejercicio20) &&
+    !isNaN(numero4Ejercicio20)
+  ) {
+    const array = [
+      numero1Ejercicio20,
+      numero2Ejercicio20,
+      numero3Ejercicio20,
+      numero4Ejercicio20,
+    ];
+
+    const numerosMayoresA100 = array.filter((i) => i > 100);
+
+    if (numerosMayoresA100.length > 0) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 20: Los números mayores que 100 son:</p>";
+      numerosMayoresA100.forEach((num) => {
+        document.getElementById("resultados").innerHTML += "<p>" + num + "</p>";
+      });
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 20: No hay números mayores que 100 entre los ingresados.</p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 20: Por favor, ingresa exactamente 4 números válidos.</p>";
+  }
+}
+
+ejercicio20();
 // 11. Hacer	un	programa	para	ingresar cuatro	números	y	luego	mostrar	por	pantalla
 // cuántos son	menores	a	100.
 // 12. Hacer	un	programa	para	ingresar	un	valor	que	estará expresado	en	minutos.	Si
