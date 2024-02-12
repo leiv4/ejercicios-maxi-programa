@@ -268,11 +268,12 @@ function ejercicio20() {
     const numerosMayoresA100 = array.filter((i) => i > 100);
 
     if (numerosMayoresA100.length > 0) {
-      document.getElementById("resultados").innerHTML +=
+      let resultadoHTML =
         "<p>Resultado de Ejercicio 20: Los números mayores que 100 son:</p>";
       numerosMayoresA100.forEach((num) => {
-        document.getElementById("resultados").innerHTML += "<p>" + num + "</p>";
+        resultadoHTML += "<p>" + num + "</p>";
       });
+      document.getElementById("resultados").innerHTML += resultadoHTML;
     } else {
       document.getElementById("resultados").innerHTML +=
         "<p>Resultado de Ejercicio 20: No hay números mayores que 100 entre los ingresados.</p>";
@@ -286,6 +287,47 @@ function ejercicio20() {
 ejercicio20();
 // 11. Hacer	un	programa	para	ingresar cuatro	números	y	luego	mostrar	por	pantalla
 // cuántos son	menores	a	100.
+
+function ejercicio21() {
+  let numero1Ejercicio21 = parseInt(
+    prompt("Ejercicio 21: Ingresa el primer numero")
+  );
+  let numero2Ejercicio21 = parseInt(
+    prompt("Ejercicio 21: Ingresa el segundo numero")
+  );
+  let numero3Ejercicio21 = parseInt(
+    prompt("Ejercicio 21: Ingresa el tercer numero")
+  );
+  let numero4Ejercicio21 = parseInt(
+    prompt("Ejercicio 21: Ingresa el cuarto numero")
+  );
+  if (
+    !isNaN(numero1Ejercicio21) &&
+    !isNaN(numero2Ejercicio21) &&
+    !isNaN(numero3Ejercicio21) &&
+    !isNaN(numero4Ejercicio21)
+  ) {
+    const array = [
+      numero1Ejercicio21,
+      numero2Ejercicio21,
+      numero3Ejercicio21,
+      numero4Ejercicio21,
+    ];
+
+    const numerosMenoresA100 = array.filter((i) => i < 100);
+    if (numerosMenoresA100.length < 100) {
+      getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 21: Los números menores a 100 son:</p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 21: No hay números menores que 100 entre los ingresados.</p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 21: Por favor, ingresa exactamente 4 números válidos.</p>";
+  }
+}
+ejercicio21();
 // 12. Hacer	un	programa	para	ingresar	un	valor	que	estará expresado	en	minutos.	Si
 // los	minutos	superan	los 60,	pasar	el	valor	a	horas,	de	lo	contrario	dejarlo	en
 // minutos.	Mostrar	el	resultado	en	pantalla	aclarando	si	se	muestran	minutos	u
