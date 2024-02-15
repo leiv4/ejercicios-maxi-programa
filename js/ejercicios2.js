@@ -332,3 +332,26 @@ ejercicio21();
 // los	minutos	superan	los 60,	pasar	el	valor	a	horas,	de	lo	contrario	dejarlo	en
 // minutos.	Mostrar	el	resultado	en	pantalla	aclarando	si	se	muestran	minutos	u
 // horas.
+function ejercicio22() {
+  let tiempoEjercicio22 = parseInt(
+    prompt("Ejercicio 22: Ingresa un número para devolver en formato hora")
+  );
+  if (tiempoEjercicio22 > 60) {
+    let horas = Math.floor(tiempoEjercicio22 / 60);
+    let minutos = tiempoEjercicio22 % 60;
+
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 22: El tiempo es de " +
+      horas +
+      " hora/s y " +
+      minutos +
+      " minuto/s</p>";
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 22: El tiempo es de " +
+      tiempoEjercicio22 +
+      " minutos</p>";
+  }
+}
+
+ejercicio22();

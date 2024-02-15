@@ -6,7 +6,6 @@
 // valor elevado al cubo.
 // Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
 
-// RECORDATORIO PERSONAL: MODIFICAR EL CÓDIGO PARA QUE CUANDO EL USUARIO INGRESE UN DATO, SE CORROBORE QUE EL DATO INGRESADO SEA EL CORRECTO, DE LO CONTRARIO, PEDIR DE NUEVO EL DATO CORRECTO.
 function ejercicio2() {
   let resultadoEjercicio2 = prompt("Ejercicio 2: Ingresa un número por favor");
   resultadoEjercicio2 = parseInt(resultadoEjercicio2);
