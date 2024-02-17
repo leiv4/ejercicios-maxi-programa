@@ -1,5 +1,27 @@
 // 1. Hacer un programa que solicite el ingreso de un número y que luego emita un
 // cartel por pantalla aclarando si el mismo es múltiplo de 5.
+function ejercicio23() {
+  let numEjercicio23 = parseInt(prompt("Ejercicio 23: Ingresa un número"));
+
+  if (!isNaN(numEjercicio23)) {
+    if (numEjercicio23 % 5 === 0) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 23: El número ingresado (" +
+        numEjercicio23 +
+        "), es múltiplo de 5 </p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 23: El número ingresado (" +
+        numEjercicio23 +
+        "), no es múltiplo de 5 </p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 23: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
+  }
+}
+
+ejercicio23();
 // 2. Hacer un programa que solicite el ingreso de dos números y luego calcular:
 // a. La resta si el primero es mayor que el segundo.
 // b. La suma si son iguales.
