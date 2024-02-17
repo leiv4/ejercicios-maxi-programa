@@ -63,9 +63,9 @@
 // temporada.
 // c. El total recaudado por cada venta.
 // d. La venta con mayor importe de cada tipo de aventura.
-// e. El paquete con menos horas incurridlas y en qué tipo de actividad fue.
+// e. El paquete con menos horas incurridas y en qué tipo de actividad fue.
 // 5. Una empresa registró las compras realizadas a sus distintos proveedores durante
-// todo el año anterior. Para cadacompra se registraron los siguientes datos:
+// todo el año anterior. Para cada compra se registraron los siguientes datos:
 // • Número de proveedor (número de cuatro cifras no correlativo).
 // • Día (1 a 31).
 // • Mes (1 a 12).
