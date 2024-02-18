@@ -27,10 +27,56 @@ ejercicio23();
 // b. La suma si son iguales.
 // c. El producto si el primero es menor.
 // Se deberá emitir un cartel por pantalla con el resultado correspondiente.
+function ejercicio24() {
+  let num1Ejercicio24 = parseInt(prompt("Ejercicio 24: Ingresa el primer número"));
+  let num2Ejercicio24 = parseInt(prompt("Ejercicio 24: Ingresa el segundo número"));
+  if (!isNaN(num1Ejercicio24 && num2Ejercicio24)) {
+    if (num1Ejercicio24 > num2Ejercicio24) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 24: La resta es: " +
+        (num1Ejercicio24 - num2Ejercicio24) +
+        "</p>";
+    } else if (num1Ejercicio24 === num2Ejercicio24) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 24: La suma es: " +
+        (num1Ejercicio24 + num2Ejercicio24) +
+        "</p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 24: El producto es: " +
+        (num2Ejercicio24 - num1Ejercicio24) +
+        "</p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 24: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
+  }
+}
+
+ejercicio24();
 // 3. Hacer un programa para ingresar dos números. Si el segundo es distinto de
 // cero, calcular la división del primero por el segundo y mostrar el resultado por
 // pantalla; caso contrario, emitir un cartel aclarando que no se puede dividir por
 // cero.
+function ejercicio25() {
+  let num1Ejercicio25 = parseInt(prompt("Ejercicio 25: Ingresa el primer número"));
+  let num2Ejercicio25 = parseInt(prompt("Ejercicio 25: Ingresa el segundo número"));
+  if (!isNaN(num1Ejercicio25 && num2Ejercicio25)) {
+    if (num2Ejercicio25 !== 0) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 25: La division es: " +
+        num1Ejercicio25 / num2Ejercicio25 +
+        "</p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 25: No se puede dividir por cero. </p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "Resultado de Ejercicio 25: El dato ingresado es incorrecto, por favor ingresa un número. ";
+  }
+}
+ejercicio25();
 // 4. Un importante negocio de desinfectante líquido realiza descuentos
 // dependiendo de la cantidad de litros vendidos según la siguiente escala:
 // a. Si vende menos de 100 litros, no hay descuento.

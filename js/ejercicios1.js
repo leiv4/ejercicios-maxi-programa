@@ -7,18 +7,22 @@
 // Nota:	no	olvides	que	sólo	contamos	con	las	cuatro	operaciones	básicas.
 
 function ejercicio2() {
-  let resultadoEjercicio2 = prompt("Ejercicio 2: Ingresa un número por favor");
-  resultadoEjercicio2 = parseInt(resultadoEjercicio2);
+  let resultadoEjercicio2 = parseInt(
+    prompt("Ejercicio 2: Ingresa un número por favor")
+  );
   let resultadoCubo = resultadoEjercicio2 ** 3;
-  // Mostrar resultados en el contenedor
-  document.getElementById("resultados").innerHTML +=
-    "<p>Resultado de Ejercicio 2: El cubo de " +
-    resultadoEjercicio2 +
-    " es " +
-    resultadoCubo +
-    "</p>";
-
-  return resultadoCubo;
+  if (!isNaN(resultadoEjercicio2)) {
+    // Mostrar resultados en el contenedor
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 2: El cubo de " +
+      resultadoEjercicio2 +
+      " es " +
+      resultadoCubo +
+      "</p>";
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 2: El dato ingresado es incorrecto, por favor ingresa un número.</p>";
+  }
 }
 // Llamar a la función al cargar el script
 ejercicio2();
