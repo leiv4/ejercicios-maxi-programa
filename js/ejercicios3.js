@@ -124,6 +124,27 @@ ejercicio26();
 // c. Si tiene menos de 6 en alguno de los dos parciales, emitir “debe
 // recuperar”.
 // El programa debe emitir solo un cartel, el que corresponda.
+function ejercicio27() {
+  let nota1Ejercicio27 = parseInt(prompt("Ejercicio 27: Ingresa la primera nota"));
+  let nota2Ejercicio27 = parseInt(prompt("Ejercicio 27: Ingresa la segunda nota"));
+  if (!isNaN(nota1Ejercicio27) && !isNaN(nota2Ejercicio27)) {
+    if (nota1Ejercicio27 >= 8 && nota2Ejercicio27 >= 8) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 27: Aprobación directa. </p>";
+    } else if (nota1Ejercicio27 >= 6 && nota2Ejercicio27 >= 6) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 27: Rinde examen final. </p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 27: Debe recuperar. </p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 27: El dato ingresado es incorrecto, por favor ingresar un número. </p>";
+  }
+}
+
+ejercicio27();
 // 6. Hacer un programa para ingresar por teclado la longitud de los tres lados de un
 // triángulo y que luego determine e informe con un cartel aclaratorio a qué tipo
 // de triángulo corresponde:
