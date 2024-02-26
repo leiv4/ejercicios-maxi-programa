@@ -140,7 +140,7 @@ function ejercicio27() {
     }
   } else {
     document.getElementById("resultados").innerHTML +=
-      "<p>Resultado de Ejercicio 27: El dato ingresado es incorrecto, por favor ingresar un número. </p>";
+      "<p>Resultado de Ejercicio 27: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
   }
 }
 
@@ -152,8 +152,77 @@ ejercicio27();
 // b. Isósceles: cuando dos de los tres lados sean iguales.
 // c. Escaleno: cuando todos los lados sean distintos.
 //  maxiprograma.com
+function ejercicio28() {
+  let lado1Ejercicio28 = parseInt(prompt("Ejercicio 28: Ingresa el primer lado"));
+  let lado2Ejercicio28 = parseInt(prompt("Ejercicio 28: Ingresa el segundo lado"));
+  let lado3Ejercicio28 = parseInt(prompt("Ejercicio 28: Ingresa el tercer lado"));
+  if (
+    !isNaN(lado1Ejercicio28) &&
+    !isNaN(lado2Ejercicio28) &&
+    !isNaN(lado3Ejercicio28)
+  ) {
+    if (
+      lado1Ejercicio28 === lado2Ejercicio28 &&
+      lado1Ejercicio28 === lado3Ejercicio28
+    ) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 28: Es un triángulo equilátero. </p>";
+    } else if (
+      lado1Ejercicio28 === lado2Ejercicio28 ||
+      lado1Ejercicio28 === lado3Ejercicio28 ||
+      lado2Ejercicio28 === lado3Ejercicio28
+    ) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 28: Es un triángulo isósceles. </p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 28: Es un triángulo escaleno. </p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 28: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
+  }
+}
+
+ejercicio28();
 // 7. Hacer un programa para ingresar 4 números. Luego analizar e informar por
 // pantalla si los mismos se encuentran ordenados de forma decreciente.
+function ejercicio29() {
+  let num1Ejercicio29 = parseInt(prompt("Ejercicio 29: Ingresa el primer número"));
+  let num2Ejercicio29 = parseInt(prompt("Ejercicio 29: Ingresa el segundo número"));
+  let num3Ejercicio29 = parseInt(prompt("Ejercicio 29: Ingresa el tercer número"));
+  let num4Ejercicio29 = parseInt(prompt("Ejercicio 29: Ingresa el cuarto número"));
+  if (
+    !isNaN(num1Ejercicio29) &&
+    !isNaN(num2Ejercicio29) &&
+    !isNaN(num3Ejercicio29)
+  ) {
+    if (
+      num1Ejercicio29 > num2Ejercicio29 &&
+      num2Ejercicio29 > num3Ejercicio29 &&
+      num3Ejercicio29 > num4Ejercicio29
+    ) {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 29: Los números son ordenados de forma decreciente: " +
+        num1Ejercicio29 +
+        ", " +
+        num2Ejercicio29 +
+        ", " +
+        num3Ejercicio29 +
+        ", " +
+        num4Ejercicio29 +
+        ". </p>";
+    } else {
+      document.getElementById("resultados").innerHTML +=
+        "<p>Resultado de Ejercicio 29: Los números no son ordenados de forma decreciente. </p>";
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 29: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
+  }
+}
+
+ejercicio29();
 // 8. El negocio de desinfectante antes mencionado vende además detergente
 // suelto, y los precios se aplican según la siguiente escala:
 // a. 25 ARS por litro los primeros 50 litros.
@@ -164,6 +233,69 @@ ejercicio27();
 // Hacer un programa que solicite la cantidad de litros vendidos y el tipo de pago
 // (ingresará 1 si paga en efectivo y 0 con cualquier otro medio de pago) y calcule
 // y emita por pantalla el monto final a abonar por el cliente.
+function ejercicio30() {
+  let litrosEjercicio30 = parseInt(
+    prompt("Ejercicio 30: Ingresa la cantidad de litros vendidos")
+  );
+  let tipoDePagoEjercicio30 = parseInt(
+    prompt(
+      "Ejercicio 30: Ingresa 1 si paga en efectivo y 0 con cualquier otro medio de pago"
+    )
+  );
+
+  if (!isNaN(litrosEjercicio30) && !isNaN(tipoDePagoEjercicio30)) {
+    if (litrosEjercicio30 <= 50 && tipoDePagoEjercicio30 === 1) {
+      document.getElementById("resultados").innerHTML +=
+        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
+        litrosEjercicio30 * 25 +
+        "<p> Descuento: 10%" +
+        "<p> Total a pagar: AR$" +
+        litrosEjercicio30 * 0.1 +
+        "</p>";
+    } else if (
+      litrosEjercicio30 >= 51 &&
+      litrosEjercicio30 <= 200 &&
+      tipoDePagoEjercicio30 === 1
+    ) {
+      document.getElementById("resultados").innerHTML +=
+        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
+        litrosEjercicio30 * 20 +
+        "<p> Descuento: 10%" +
+        "<p> Total a pagar: AR$" +
+        litrosEjercicio30 * 0.1 +
+        "</p>";
+    } else if (
+      litrosEjercicio30 >= 201 &&
+      litrosEjercicio30 <= 500 &&
+      tipoDePagoEjercicio30 === 1
+    ) {
+      document.getElementById("resultados").innerHTML +=
+        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
+        litrosEjercicio30 * 15 +
+        "<p> Descuento: 10%" +
+        "<p> Total a pagar: AR$" +
+        litrosEjercicio30 * 0.1 +
+        "</p>";
+    } else if (litrosEjercicio30 >= 501 && tipoDePagoEjercicio30 === 1) {
+      document.getElementById("resultados").innerHTML +=
+        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
+        litrosEjercicio30 * 10 +
+        "<p> Descuento: 10%" +
+        "<p> Total a pagar: AR$" +
+        litrosEjercicio30 * 0.1 +
+        "</p>";
+    } else if (litrosEjercicio30 <= 50 && tipoDePagoEjercicio30 === 0) {
+    } else if (
+      litrosEjercicio30 >= 51 &&
+      litrosEjercicio30 <= 200 &&
+      tipoDePagoEjercicio30 === 1
+    ) {
+    }
+  } else {
+    document.getElementById("resultados").innerHTML +=
+      "<p>Resultado de Ejercicio 30: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
+  }
+}
 // 9. Una importante marca de computadoras permite elegir cierta configuración del
 // equipo a comprar. Para ello existe la siguiente escala de precios:
 // i5 (1) i7 (2) i9 (3)
