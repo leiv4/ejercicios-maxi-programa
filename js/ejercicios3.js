@@ -244,58 +244,36 @@ function ejercicio30() {
   );
 
   if (!isNaN(litrosEjercicio30) && !isNaN(tipoDePagoEjercicio30)) {
-    if (litrosEjercicio30 <= 50 && tipoDePagoEjercicio30 === 1) {
-      document.getElementById("resultados").innerHTML +=
-        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
-        litrosEjercicio30 * 25 +
-        "<p> Descuento: 10%" +
-        "<p> Total a pagar: AR$" +
-        litrosEjercicio30 * 0.1 +
-        "</p>";
-    } else if (
-      litrosEjercicio30 >= 51 &&
-      litrosEjercicio30 <= 200 &&
-      tipoDePagoEjercicio30 === 1
-    ) {
-      document.getElementById("resultados").innerHTML +=
-        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
-        litrosEjercicio30 * 20 +
-        "<p> Descuento: 10%" +
-        "<p> Total a pagar: AR$" +
-        litrosEjercicio30 * 0.1 +
-        "</p>";
-    } else if (
-      litrosEjercicio30 >= 201 &&
-      litrosEjercicio30 <= 500 &&
-      tipoDePagoEjercicio30 === 1
-    ) {
-      document.getElementById("resultados").innerHTML +=
-        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
-        litrosEjercicio30 * 15 +
-        "<p> Descuento: 10%" +
-        "<p> Total a pagar: AR$" +
-        litrosEjercicio30 * 0.1 +
-        "</p>";
-    } else if (litrosEjercicio30 >= 501 && tipoDePagoEjercicio30 === 1) {
-      document.getElementById("resultados").innerHTML +=
-        "<p> Resultado de Ejercicio 30: Su importe es de: AR$</p>" +
-        litrosEjercicio30 * 10 +
-        "<p> Descuento: 10%" +
-        "<p> Total a pagar: AR$" +
-        litrosEjercicio30 * 0.1 +
-        "</p>";
-    } else if (litrosEjercicio30 <= 50 && tipoDePagoEjercicio30 === 0) {
-    } else if (
-      litrosEjercicio30 >= 51 &&
-      litrosEjercicio30 <= 200 &&
-      tipoDePagoEjercicio30 === 1
-    ) {
+    let importeEjercicio30 = 0;
+
+    if (litrosEjercicio30 <= 50) {
+      importeEjercicio30 = litrosEjercicio30 * 25;
+    } else if (litrosEjercicio30 <= 200) {
+      importeEjercicio30 = litrosEjercicio30 * 20;
+    } else if (litrosEjercicio30 <= 500) {
+      importeEjercicio30 = litrosEjercicio30 * 15;
+    } else {
+      importeEjercicio30 = litrosEjercicio30 * 10;
     }
+
+    let mensaje =
+      "<p> Resultado de Ejercicio 30: Su importe es de: AR$" +
+      importeEjercicio30 +
+      "</p>";
+
+    if (tipoDePagoEjercicio30 === 1) {
+      let importeConDescuento = importeEjercicio30 * 0.9; // Aplica el descuento del 10% si paga en efectivo
+      mensaje += "<p> Importe con descuento: AR$" + importeConDescuento + "</p>";
+    }
+
+    document.getElementById("resultados").innerHTML += mensaje;
   } else {
     document.getElementById("resultados").innerHTML +=
       "<p>Resultado de Ejercicio 30: El dato ingresado es incorrecto, por favor ingresa un número. </p>";
   }
 }
+
+ejercicio30();
 // 9. Una importante marca de computadoras permite elegir cierta configuración del
 // equipo a comprar. Para ello existe la siguiente escala de precios:
 // i5 (1) i7 (2) i9 (3)
